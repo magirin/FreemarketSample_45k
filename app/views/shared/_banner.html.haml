@@ -1,0 +1,15 @@
+%aside.app-banner
+  .app-banner__pc
+    .content-left
+      %h2.recomend-smartphone スマホでかんたんフリマアプリ
+      %p.recomenddownload-text 今すぐ無料ダウンロード！
+      .banner-link
+        .banner-link__inner-left
+          = image_tag 'mercari_icon.png', alt: 'mercari', class: 'mercari-icon'
+        .banner-link__inner-right
+          = link_to "/" do
+            = image_tag 'Download_on_the_App_Store.svg', alt: 'appstore_link', class: 'appstore-icon'
+          = link_to "/" do
+            = image_tag 'google-play-badge.png', alt: 'googleplay', class: 'googleplay-icon'
+    .content-right
+      = image_tag 'download_content_pc.png', alt: 'dlcontent', class: 'download-image'

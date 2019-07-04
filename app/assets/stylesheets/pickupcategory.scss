@@ -1,0 +1,23 @@
+.pickup{
+  h2, h3 {
+    text-align: center;
+  }
+  a {
+    color: #0099e8;
+    font-size: 22px;
+  }
+}
+.pickup__items{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.pickup__items-item{
+  height: 330px;
+  width: 212px;
+}
+.pickup__items-item-outline{
+  display: flex;
+ justify-content: space-between;
+ }

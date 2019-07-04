@@ -1,0 +1,19 @@
+= render "shared/header"
+.user-profile-header
+.menu-bar
+%main.mypage-main
+  .content-right
+    .content-right__header プロフィール
+    .content-right__icon
+      .content-right__icon--avator
+      .content-right__icon--text-field
+    .content-right__profile
+      .content-right__profile--text-area 例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪
+      .content-right__profile--sent-button 変更する
+    .footer-sell-button
+      .footer-sell-button__letter 出品
+      %i.fas.fa-camera.footer-sell-button__icon
+    = render 'shared/sell_btn'
+  = render 'shared/mypage_sidebar'
+=render "shared/banner"
+=render "shared/footer"

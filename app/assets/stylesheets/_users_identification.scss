@@ -1,0 +1,145 @@
+body {
+  background-color: #f5f5f5;
+}
+
+.user-identification-header{
+  background-color: blue;
+  height: 100px;
+  width: 100vw;
+}
+
+.menu-bar{
+  background-color: yellow;
+  height: 40px;
+  margin: 0 0 40px 0;
+  width: 100vw;
+}
+
+.mypage-main{
+  margin:40px auto 0;
+  overflow:hidden;
+  padding:0 0 40px;
+  width:1020px;
+}
+
+.content-right{
+  background-color: #fafafa;
+  color: black;
+  float: right;
+  font-size: 30px;
+  height: 100%;
+  padding-bottom: 60px;
+  overflow: hidden;
+  width: 700px;
+
+
+  &__header{
+    &--border {
+      background-color:#fafafa;
+      border-bottom: 1px solid #eee;
+      font-size: 24px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      width: 700px;
+    }
+  }
+
+  &__wrapper{
+    margin: 40px;
+  }
+
+  &__info-top{
+    display: inline-block;
+    font-size: 14px;
+    margin-top:8px;
+    overflow: hidden;
+
+      &--link{
+        display: inline-block;
+        float: left;
+        font-size: 14px;
+        margin-left: 350px;
+      }
+
+      &--arrow{
+        display: inline-block;
+        float: right;
+        font-size: 14px;
+        margin-right: 20px;
+      }
+
+  }
+
+  &__info{
+      &--link{
+        display: inline-block;
+        float: left;
+        font-size: 14px;
+        margin: 40px 0 0 445px;
+      }
+
+      &--arrow{
+        display: inline-block;
+        float: right;
+        font-size: 14px;
+        margin: 40px 90px 0 0;
+      }
+
+  }
+
+  &__detail{
+    font-size: 14px;
+    margin-top: 40px;
+    position: relative;
+
+      &--title{
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      &--box{
+        border: solid 1px;
+        box-sizing: border-box;
+        color: gray;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 8px;
+        padding-left: 15px;
+        width: 572px;
+      }
+
+      &--optional{
+        margin-left: 8px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        display: inline-block;
+        background-color: #ccc;
+        box-sizing: border-box;
+      }
+  }
+
+  &__register-box {
+    background-color: white;
+    &--sent-button {
+      background-color: red;
+      color: white;
+      font-size: 20px;
+      height: 50px;
+      line-height: 50px;
+      margin-left: 40px;
+      text-align: center;
+      width: 572px;
+    }
+  }
+}
+
+.pull-down{
+  position: absolute;
+  right: 75px;
+  top: 45px;
+}

@@ -1,0 +1,124 @@
+body {
+  background-color: #eee;
+}
+.user-identification-header{
+  background-color: blue;
+  height: 100px;
+  width: 100vw;
+}
+
+.menu-bar{
+  background-color: yellow;
+  height: 40px;
+  margin: 0 0 40px 0;
+  width: 100vw;
+}
+
+.mypage-main{
+  margin:40px auto 0;
+  overflow:hidden;
+  padding:0 0 40px;
+  width:1020px;
+
+  .content-right{
+    background-color: white;
+    clear: fix;
+    color: black;
+    float: right;
+    font-size: 30px;
+    width: 700px;
+
+    &__header{
+      background-color: white;
+      font-size: 24px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      width: 700px;
+    }
+    &__icon{
+      background-color: red;
+      height: 156px;
+      width: 700px;
+
+      &--avator{
+        border-radius: 50%;
+        background-color: green;
+        float: left;
+        height: 60px;
+        margin: 67px 0 0 170px;
+        width: 60px;
+
+      }
+
+      &--text-field{
+        background-color: white;
+        border-radius: 10px;
+        float: right;
+        height: 48px;
+        margin: 72px 228px 24px 0;
+        width: 228px;
+      }
+
+    }
+
+    &__profile{
+      background-color: white;
+      margin: auto;
+      overflow: hidden;
+      padding: 40px 16px;
+      width: 668px;
+
+      &--text-area{
+        background-color: white;
+        border: solid;
+        border-width: 1px;
+        color: gray;
+        font-size: 16px;
+        height: 216px;
+        width: 668px;
+      }
+
+      &--sent-button{
+        background-color: red;
+        color: white;
+        font-size: 14px;
+        height: 50px;
+        line-height: 48px;
+        margin: 16px 0 0;
+        text-align: center;
+        width: 668px;
+      }
+    }
+
+  }
+}
+
+.footer-sell-button{
+  background-color: red;
+  border-radius: 50%;
+  bottom: 25px;
+  height: 160px;
+  position: fixed;
+  right: 25px;
+  width: 160px;
+
+  &__letter{
+    color: white;
+    font-size: 25px;
+    margin: 30px 0 0 0;
+    text-align: center;
+  }
+
+  &__icon{
+    color: white;
+    font-size: 50px;
+    margin: 0 55px;
+  }
+}
+
+.footer{
+  background-color: black;
+  height: 391px;
+  width: 100vw;
+}

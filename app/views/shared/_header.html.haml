@@ -1,0 +1,125 @@
+.header
+  .header__top
+    .header__top-left
+      %a{:href => "#"}
+        = image_tag "logo.svg", size: "134x36", alt: "ロゴ"
+    .header__top-right
+      %form{:action => "#", :method => "post"}
+        %div
+          %input{:name => "search", :placeholder => "何かお探しですか？", :size => "50", :type => "search"}/
+          = fa_icon 'search', class: 'search-icon'
+  .header__bottom
+    .header__bottom-left
+      .header__bottom-left--item-category
+        %ul#category
+          %li
+            %i.fas.fa-list.header__bottom-left--itemcategory-list
+            %a{:href => "#"} カテゴリーから探す
+            %ul.child
+              %li
+                %a{:href => "#"} レディース
+                %ul
+                  %li.submenu
+                    %a{:href => "#"} トップス
+                    %ul
+                      %li
+                        %a{:href => "#"} Tシャツ/カットソー(半袖/袖なし)
+                      %li
+                        %a{:href => "#"} Tシャツ/カットソー(七分/長袖)
+                      %li
+                        %a{:href => "#"} シャツ/ブラウス(半袖/袖なし)
+                      %li
+                        %a{:href => "#"} シャツ/ブラウス(七分/長袖)
+                      %li
+                        %a{:href => "#"} ポロシャツ
+                      %li
+                        %a{:href => "#"} キャミソール
+                      %li
+                        %a{:href => "#"} タンクトップ
+                      %li
+                        %a{:href => "#"} ホルターネック
+                      %li
+                        %a{:href => "#"} ニット/セーター
+                      %li
+                        %a{:href => "#"} チュニック
+                      %li
+                        %a{:href => "#"} カーディガン/ボレロ
+                      %li
+                        %a{:href => "#"} アンサンブル
+                      %li
+                        %a{:href => "#"} ベスト/ジレ
+                      %li
+                        %a{:href => "#"} パーカー
+                  %li
+                    %a{:href => "#"} ジャケット/アウター
+                  %li
+                    %a{:href => "#"} パンツ
+                  %li
+                    %a{:href => "#"} スカート
+                  %li
+                    %a{:href => "#"} ワンピース
+                  %li
+                    %a{:href => "#"} 靴
+                  %li
+                    %a{:href => "#"} ルームウェア/パジャマ
+                  %li
+                    %a{:href => "#"} レッグウェア
+                  %li
+                    %a{:href => "#"} 帽子
+                  %li
+                    %a{:href => "#"} バッグ
+                  %li
+                    %a{:href => "#"} アクセサリー
+                  %li
+                    %a{:href => "#"} ヘアアクセサリー
+                  %li
+                    %a{:href => "#"} 小物
+                  %li
+                    %a{:href => "#"} 時計
+              %li
+                %a{:href => "#"} メンズ
+              %li
+                %a{:href => "#"} ベビー・キッズ
+              %li
+                %a{:href => "#"} インテリア・住まい・小物
+              %li
+                %a{:href => "#"} 本・音楽・ゲーム
+              %li
+                %a{:href => "#"} おもちゃ・ホビー・グッズ
+              %li
+                %a{:href => "#"} コスメ・香水・美容
+              %li
+                %a{:href => "#"} 家電・スマホ・カメラ
+              %li
+                %a{:href => "#"} スポーツ・メジャー
+              %li
+                %a{:href => "#"} ハンドメイド
+              %li
+                %a{:href => "#"} チケット
+              %li
+                %a{:href => "#"} 自転車・オートバイ
+              %li
+                %a{:href => "#"} その他
+              %li
+                %a{:href => "#"} カテゴリー一覧
+      .header__bottom-left--item-brand
+        %ul#bland
+          %li
+            %i.fas.fa-tag.header__bottom-left--itemcategory-brand
+            %a{:href => "#"} ブランドから探す
+            %ul.child
+              %li
+                %a{:href => "#"} シャネル
+              %li
+                %a{:href => "#"} ナイキ
+              %li
+                %a{:href => "#"} ルイヴィトン
+              %li
+                %a{:href => "#"} シュプリーム
+              %li
+                %a{:href => "#"} アディダス
+              %li
+                %a{:href => "#"} カテゴリー一覧
+    .header__bottom-right
+      %a.sign_in_btn{:href => "#"} ログイン
+      %a.new_user_btn{:href => "#"} 新規会員登録

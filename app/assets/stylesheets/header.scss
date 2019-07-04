@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+.header__top, .header__bottom {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.header__top-right {
+  margin-top: 35px;
+}
+.header__bottom-left {
+  display: flex;
+  position: relative;
+}
+.header__bottom-right {
+  display: flex;
+}
+.sign_in_btn {
+  background-color: #ff0000;
+  border-radius: 5px;
+  border: solid 2px #ff0000;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 40px;
+  margin-top: 28px;
+  padding: 0px 20px;
+  text-align: center;
+  width: 150px;
+}
+.new_user_btn {
+  border-radius: 5px;
+  border: solid 2px #1e90ff;
+  color: #1e90ff;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 40px;
+  margin-top: 28px;
+  padding: 0px 20px;
+  text-decoration: none;
+  text-align: center;
+  width: 150px;
+}
+.new_user_btn:hover {
+  background: #1e90ff;
+  color: #ffffff;
+}
+.search-icon{
+  background: #696969;
+  color: #ffffff;
+  height: 20px;
+  width: 20px;
+}
+.fa-list.header__bottom-left--itemcategory-list, .header__bottom-left--itemcategory-brand{
+  color: #dc143c;
+}
+#category, #bland {
+  background-color: #ffffff;
+  margin: 0px;
+  padding: 0px 0px 0px 15px;
+}
+#category li, #bland li {
+  display: inline-block;
+  display: flex;
+  list-style-type: none;
+  position: relative;
+  width: 250px;
+}
+#category a, #bland a {
+  color: #000000;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+}
+#category ul, #bland ul {
+  background-color: #ffffff;
+  display:none;
+  margin: 0px;
+  margin-top: 15px;
+  padding: 0px;
+  position: absolute;
+  width: 250px;
+}
+#category ul li, #bland ul li {
+  width: 250px;
+}
+#category ul li a, #bland ul li a {
+  font-weight: normal;
+  padding-left: 5px;
+  text-align: left;
+}
+#category ul ul, #bland ul ul {
+  display: none;
+  left: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: -1px;
+}
+#category li a:hover, #bland li a:hover {
+  color: #1e90ff;
+}
+#category ul li ul li a:hover, #bland ul li ul li a:hover {
+  background-color: #dcdcdc;
+  color: #000000;
+}
+#category ul li a:hover, #bland ul li a:hover {
+  background-color: #dc143c;
+  color: #ffffff;
+}
+.picslide{
+  padding: 50px 0;
+}
+#slider{
+  margin: 0 auto;
+  img{
+    width: 100%;
+  }
+}

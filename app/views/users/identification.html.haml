@@ -1,0 +1,48 @@
+= render "shared/header"
+.user-identification-header
+.menu-bar
+%main.mypage-main
+  .content-right
+    .content-right__header--border 本人情報登録
+    .content-right__wrapper
+      .content-right__info-top お客さまの本人情報をご登録ください。<br>登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+      .content-right__info-top--link 本人確認書類のアップロードについて
+      .content-right__info-top--arrow >
+      .content-right__detail
+        .content-right__detail--title お名前
+        .content-right__detail--info name
+      .content-right__detail
+        .content-right__detail--title お名前カナ
+        .content-right__detail--info name-kana
+      .content-right__detail
+        .content-right__detail--title 生年月日
+        .content-right__detail--info BOD
+      .content-right__detail
+        .content-right__detail--title 郵便番号
+        %span.content-right__detail--optional 任意
+        .content-right__detail--box 例）１２３４５６
+      .content-right__detail
+        .content-right__detail--title 都道府県
+        %span.content-right__detail--optional 任意
+        .content-right__detail--box 神奈川県
+        %i.fas.fa-chevron-down.pull-down
+      .content-right__detail
+        .content-right__detail--title 市区町村
+        %span.content-right__detail--optional 任意
+        .content-right__detail--box 〇〇市〇〇区
+      .content-right__detail
+        .content-right__detail--title 番地
+        %span.content-right__detail--optional 任意
+        .content-right__detail--box 〇〇1-111-1111
+      .content-right__detail
+        .content-right__detail--title 建物名
+        %span.content-right__detail--optional 任意
+        .content-right__detail--box 例）〇〇ビル
+    .content-right__register-box
+      .content-right__register-box--sent-button 登録する
+      .content-right__info--link 本人情報の登録について
+      .content-right__info--arrow >
+    = render 'shared/sell_btn'
+  = render 'shared/mypage_sidebar'
+=render "shared/banner"
+=render "shared/footer"

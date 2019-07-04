@@ -1,0 +1,69 @@
+.app-banner {
+  background-image: url(banner_room.jpg);
+  background-position: center;
+  background-size: cover;
+  &__pc {
+    background-position: center;
+    background-size: cover;
+    color: #FFF;
+    height: 260px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 750px;
+    .content-left {
+      left: 0%;
+      position: absolute;
+      top: 20%;
+      .recomend-smartphone {
+        font-size: 24px;
+        margin-bottom: 0;
+      }
+      .recomenddownload-text {
+        font-size: 35px;
+        margin: 10px 0 0;
+      }
+      .banner-link{
+        &__inner-left {
+          float: left;
+          margin-top: 10px;
+          .mercari-icon {
+            background-color: #FFF;
+            border-radius: 10px;
+            height: 65px;
+            width: 65px;
+          }
+        }
+        &__inner-right {
+          margin-left: 10px;
+          padding-top: 20px;
+          .appstore-icon {
+            float: left;
+            height: auto;
+            width: 133px;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+          .googleplay-icon {
+            width: 150px;
+            height: 65px;
+            transform: translate(0, -10px);
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+    .content-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      .download-image {
+        width: 300px;
+        height: auto;
+      }
+    }
+  }
+}

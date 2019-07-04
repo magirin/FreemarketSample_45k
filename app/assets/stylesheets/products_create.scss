@@ -1,0 +1,272 @@
+body{
+    background-color:rgb(245, 245, 245);;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-left: 10px;
+}
+
+.arrow-down{
+    position: relative;
+    left: 370px;
+    top: -35px;
+}
+
+.icon-header{
+    width: 100vh;
+    height: 128px;
+    margin: auto;
+    text-align: center;
+    line-height: 170px;
+}
+
+.content-wrapper{
+    width: 700px;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+
+    &__header{
+        padding: 32px 16px;
+        font-size: 22px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        border-bottom: solid 1px;
+        border-color: #eee;
+    }
+}
+
+.essential-icon{
+    height: 19px;
+    width: 32px;
+    color: white;
+    background-color: red;
+    font-size: 12px;
+    text-align: center;
+    line-height: 19px;
+    margin: 0 0 0 8px;
+    padding: 4px;
+    border-radius: 2px;
+} 
+
+.optional-icon{
+    height: 19px;
+    width: 32px;
+    color: white;
+    background-color: #cccccc;
+    font-size: 12px;
+    text-align: center;
+    line-height: 19px;
+    margin: 0 0 0 8px;
+    padding: 4px;
+    border-radius: 2px;
+} 
+
+.detail-container{
+    height: 100%;
+    width: 400px;
+    float: right;
+    right: 20px;
+
+    &__sub{
+        border-bottom: solid 1px #eee;
+        height: 72px;
+    }
+}
+
+.upload-container{
+    margin: auto;
+}
+
+.size-ajust{
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+}
+
+.upload-box{
+    padding: 40px;
+    border-bottom: solid 1px;
+    border-color: #eee;
+
+    &__title{
+        float: left;
+        font-size: 14px;
+    }
+
+    &__description{
+        clear: both;
+        font-size: 14px;
+        margin: 8px 0 15px 0;
+    }
+
+    &__upload-box{
+        height: 80px;
+        width: 540px;
+        padding: 40px;
+        text-align: center;
+        border: 1px dashed #ccc;
+        font-size: 14px;
+        background-color: #f5f5f5;
+        vertical-align: middle;
+        display: table-cell;
+    }
+}
+
+.content{
+    padding: 40px;
+    border-bottom: solid 1px;
+    border-color: #eee;
+
+    &__name{
+        display: block;
+        float: left;
+    }
+
+    &__form{
+        clear: both;
+        height: 48px;
+        width: 620px;
+        line-height: 48px;
+        margin: 8px 0 8px 0;
+        font-size: 14px;
+    }
+
+    &__textarea{
+        height: 142px;
+        width: 620px;
+        clear: both;
+        line-height: 48px;
+        margin: 8px 0 8px 0;
+        font-size: 14px;
+    }
+}
+
+.yen{
+    left: 123px;
+    top: 14px;
+    position: relative;
+    font-size: 12px;
+}
+
+.question-icon{
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: #0099e8;
+    color: white;
+    font-size: 5px;
+    text-align: center;
+    line-height: 14px;
+    display: inline-block;
+}
+
+.detail{
+    padding: 40px;
+    border-bottom: solid 1px;
+    border-color: #eee;
+    display: inline-block;
+    width: 620px;
+
+    &__title{
+        display: inline;
+        font-size: 14px;
+    }
+
+    &__subtitle{
+       display: inline; 
+    }
+
+    &__pull-down{
+        height: 48px;
+        width: 400px;
+        border: solid 1px #ccc;
+        margin-top: 4px;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    &__price-input{
+        height: 48px;
+        width: 160px;
+        border: solid 1px;
+        margin-top: -25px;
+        margin-bottom: 24px;
+        padding: 0 10px 0 0;
+        display: inline-block;
+        float: right;
+        text-align: right;
+        line-height: 48px;
+        color: gray;
+    }
+
+    &__commission{
+        line-height: 73px;
+        border-bottom: #eee;
+    }
+
+    &__profit{
+        line-height: 73px;
+        display: inline-flex;
+
+        &--bar{
+            float: right;
+            line-height: 73px;
+            font-size: 34px;
+        }
+    }
+
+}
+
+.sell-box{
+    padding: 40px;
+
+    &__description{
+        font-size: 14px;
+
+        &--link{
+            font-size: 14px;
+            display: inline;
+        }
+    }
+
+    &__sell-button{
+        height: 50px;
+        width: 550px;
+        background-color: red;
+        text-align: center;
+        line-height: 50px;
+        color: white;
+        margin: 40px 40px 0 40px;
+    }
+
+    &__back-button{
+        height: 50px;
+        width: 250px;
+        background-color:gray;
+        text-align: center;
+        line-height: 50px;
+        color: white;
+        margin: 24px 180px 0;
+    }
+}
+.sub-footer{
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    line-height: 25px;
+
+    &__block{
+        display: inline-flex;
+        margin-left: 15px;
+    }
+
+    &__icon{
+        margin-top: 30px;
+    }
+}

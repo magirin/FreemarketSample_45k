@@ -1,0 +1,4 @@
+$bordercolor: #eee;
+$mainbgcolor: #f5f5f5;
+$contentsbgcolor: #FFF;
+$contentsbggraycolor: #fafafa;

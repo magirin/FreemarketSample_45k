@@ -1,0 +1,274 @@
+
+body{
+  background-color: #f5f5f5;
+}
+
+.product-container{
+  background-color: #FFF;
+  height: 100%;
+  margin: 40px auto 0;
+  padding: 24px 40px 40px;
+  width: 620px;
+}
+
+.product-wrapper{
+  height: 500px;
+}
+
+.button-wrapper{
+  display: flex;
+  margin-top: 12px;
+}
+
+.about-safty{
+  display: flex;
+  margin: 8px 0 0 120px;
+
+  &__icon{
+
+  }
+
+  &__letter{
+      font-size: 12px;
+      margin-left: 8px;
+  }
+}
+
+.good-button{
+  background-color: #f5f5f5;
+  border-radius: 40px;
+  display: flex;
+  font-size: 12px;
+  height: 33px;
+  margin-right: 8px;
+  width: 110px;
+
+  &__icon{
+    margin: 11px 8px 0 12px;
+  }
+
+  &__letter{
+    line-height: 33px;
+  }
+
+  &__count{
+    line-height: 33px;
+    margin-left: 8px;
+  }
+}
+
+.report-button{
+  background-color: #f5f5f5;
+  display: flex;
+  border-radius: 40px;
+  font-size: 12px;
+  height: 33px;
+  width: 150px;
+
+  &__icon{
+    margin: 11px 8px 0 12px;
+  }
+
+  &__letter{
+    line-height: 33px;
+  }
+
+}
+
+.product{
+
+  &__title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  &__picture{
+    background-color: #fafafa;
+    display: inline-block;
+    margin-top: 16px;
+    width: 300px;
+
+      &--main{
+        background-color: red;
+        height: 300px;
+        width: 300px;
+      }
+
+      &--sub-container{
+        font-size:0;
+        height: 120px;
+        width: 300px;
+      }
+
+      &--sub{
+        background-color: blue;
+        border: solid 1px;
+        box-sizing: border-box;
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+      }
+  }
+
+  &__price-box{
+    margin: 0 170px;
+  }
+
+  &__price{
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+
+      &--tax{
+        display: inline-block;
+        font-size: 10px;
+      }
+
+      &--shipping{
+        display: inline-block;
+        font-size: 16px;
+      }
+  }
+
+  &__detail{
+    float: right;
+    height: 420px;
+    margin-top: 16px;
+    width: 300px;
+
+      &--pack{
+        box-sizing: border-box;
+        display: table;
+        height: 11%;
+        table-layout: fixed;
+        width: 100%;
+      }
+
+      &--left{
+        background-color: #fafafa;
+        border: 1px solid #f5f5f5;
+        display: table-cell;
+        font-size: 14px;
+        height: 49px;
+        line-height: 49px;
+        text-align: center;
+        width: 39%;
+      }
+
+      &--right{
+        background-color: #FFF;
+        border: 1px solid #f5f5f5;
+        box-sizing: border-box;
+        display: table-cell;
+        font-size: 14px;
+        height: 49px;
+        line-height: 49px;
+        text-align: center;
+        width: 56%;
+      }
+  }
+
+  &__action-button{
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 16px;
+    text-align: center;
+    width: 620px;
+  }
+
+  &__description{
+    font-size: 14px;
+    margin-top: 24px;
+  }
+}
+
+.comment{
+
+  &__wrapper{
+    background-color: #FFF;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 15px auto 0;
+    padding: 24px;
+    width: 700px;
+  }
+
+  &__container{
+    height: 100%;
+  }
+
+  &__note{
+    background-color: #fff6de;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  &__box{
+    border: 1px solid;
+    height: 100px;
+    margin-top: 8px;
+    padding: 10px;
+  }
+
+  &__sent-button{
+    background-color: #aaaaaa;
+    color: white;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 8px;
+    text-align: center;
+  }
+}
+
+.product-link{
+  margin: 24px auto;
+  width: 700px;
+
+  &__right{
+    display: flex;
+    float: right;
+  }
+
+  &__left{
+    display: flex;
+    float: left;
+  }
+
+  &__right-arrow{
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  &__left-arrow{
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  &__name{
+    font-size: 14px;
+  }
+}
+
+.sns-icon{
+  background-color: #fafafa;
+  height: 140px;
+  margin: 65px auto;
+  width: 700px;
+
+  &__wrapper{
+  padding: 45px 275px 0;
+  box-sizing: border-box;
+  }
+
+  &__image{
+    border-radius: 10px;
+    display: inline-block;
+  }
+}
