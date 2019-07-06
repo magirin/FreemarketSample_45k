@@ -32,7 +32,7 @@
         %i.fas.fa-chevron-down.arrow-down
         .detail__subtitle ブランド
         %span.optional-icon 任意
-        = f.text_field :bland, class: "detail__pull-down", placeholder: "例) シャネル"
+        = f.text_field :bland_id, class: "detail__pull-down", placeholder: "例) シャネル"
         .detail__subtitle サイズ
         %span.essential-icon 必須
         = f.select :size, { "---": nil, "XXS以下": 1, "XS(SS)": 2, "S": 3, "M": 4, "L": 5, "L": 6, "XL": 7, "2XL": 8, "3XL": 9, "4XL(5L)": 10, "FREE SIZE": 11} , {} , { class: "detail__pull-down"}
