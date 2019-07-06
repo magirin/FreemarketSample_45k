@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'products#create'
+  root 'products#index'
   resources :products, only: [:show, :index,:new ,:create]
   resources :users, only: [:edit] do
     member do
