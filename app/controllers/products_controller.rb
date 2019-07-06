@@ -3,9 +3,18 @@ class ProductsController < ApplicationController
   def index
   end
 
+  def new
+    
+  end
+
   def create
+    binding.pry
     @category = 0
     @product = Product.new
+    @product = set_product_params
+    # if @product.save
+    #   redirect_to root, notice: '商品を出品しました'
+    # end
   end
 
   def edit
@@ -18,6 +27,12 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def set_product_params
+    params.require(:product).permit(:name, :description, :category_id, :sub_category_id, :item_id, :bland_id, :size, :product_quality, :shipping_price, :shipping_way, :shipping_place, :shipping_date, :price)
   end
 
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'products#index'
-  resources :products, only: [:show, :index, :create]
+  root 'products#create'
+  resources :products, only: [:show, :index,:new ,:create]
   resources :users, only: [:edit] do
     member do
       get 'identification'
