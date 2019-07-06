@@ -8,11 +8,11 @@ class ProductsController < ApplicationController
   end
 
   def create
-    # binding.pry
-    @product = set_product_params
-    # if @product.save
-    #   redirect_to root, notice: '商品を出品しました'
-    # end
+    @product = Product.create!(set_product_params)
+    binding.pry
+    if @product.create
+      redirect_to root, notice: 'エラー'
+    end
   end
 
   def edit
