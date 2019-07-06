@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
   get 'jp/index'
-
-  devise_for :users
   root 'jp#index'
-  resources :products, only: [:show, :index,:new ,:create]
+  root 'products#index'
+  resources :products, only: [:show, :index, :create, :new]
   resources :users, only: [:edit] do
     member do
       get 'identification'
