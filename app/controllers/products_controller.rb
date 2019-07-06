@@ -4,13 +4,12 @@ class ProductsController < ApplicationController
   end
 
   def new
-    
+    @product = Product.new
   end
 
   def create
-    binding.pry
+    # binding.pry
     @category = 0
-    @product = Product.new
     @product = set_product_params
     # if @product.save
     #   redirect_to root, notice: '商品を出品しました'
