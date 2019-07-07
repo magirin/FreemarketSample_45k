@@ -66,6 +66,10 @@ select {
     border-radius: 2px;
 } 
 
+.detail-container-pack{
+    margin-bottom: 15px;
+}
+
 .detail-container{
     height: 100%;
     width: 400px;
@@ -143,6 +147,7 @@ select {
         line-height: 48px;
         margin: 8px 0 8px 0;
         font-size: 14px;
+        border: solid 1px #ccc;
     }
 }
 
@@ -170,7 +175,7 @@ select {
     border-bottom: solid 1px;
     border-color: #eee;
     display: inline-block;
-    width: 620px;
+    width: 700px;
 
     &__title{
         display: inline;
@@ -194,7 +199,6 @@ select {
         height: 48px;
         width: 160px;
         border: solid 1px;
-        margin-top: -25px;
         margin-bottom: 24px;
         padding: 0 10px 0 0;
         display: inline-block;
