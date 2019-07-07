@@ -8,17 +8,20 @@
         %span.essential-icon 必須
         .upload-box__description 最大10枚までアップロードできます
         .upload-box__upload-box ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード
-        = f.file_field :image, class: 'upload-box__upload-box'
+        = f.fields_for :product_image do |ff|
+          = ff.file_field :image, multiple: true, class: 'upload-box__upload-box'
     .content
+
       .content__name 商品名
       %span.essential-icon 必須
       = f.text_field :name, class: "content__form", placeholder: "商品名（必須40文字まで）"
+
       .content__name 商品の説明
       %span.essential-icon 必須
       = f.text_area :description, class: "content__textarea", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+    
     .detail
       .detail__title 商品の詳細
-      .size-ajust
       .detail-container
         .detail__subtitle カテゴリー
         %span.essential-icon 必須
@@ -30,37 +33,46 @@
         - sub_category_id = 1
         = f.collection_select :item_id, Item.where(sub_category_id: sub_category_id), :id, :name, { include_blank: true , selected: '---'}, { class: "detail__pull-down" }
         %i.fas.fa-chevron-down.arrow-down
+
         .detail__subtitle ブランド
         %span.optional-icon 任意
         = f.text_field :bland_id, class: "detail__pull-down", placeholder: "例) シャネル"
+
         .detail__subtitle サイズ
         %span.essential-icon 必須
         = f.select :size, { "---": nil, "XXS以下": 1, "XS(SS)": 2, "S": 3, "M": 4, "L": 5, "L": 6, "XL": 7, "2XL": 8, "3XL": 9, "4XL(5L)": 10, "FREE SIZE": 11} , {} , { class: "detail__pull-down"}
         %i.fas.fa-chevron-down.arrow-down
+
         .detail__subtitle 商品の状態
         %span.essential-icon 必須
         = f.select :product_quality, { "---": nil, 新品、未使用: 1, 目立った傷や汚れなし: 2, やや傷や汚れあり: 3, 傷や汚れあり: 4, 全体的に状態が悪い: 5 }, {} ,{ class: "detail__pull-down" }
         %i.fas.fa-chevron-down.arrow-down
+
     .detail
       .detail__title 配送について
       .question-icon ?
       .detail-container
+
         .detail__subtitle 配送料の負担
         %span.essential-icon 必須
         = f.select :shipping_price, { "---": nil, "送料込み(出品者負担)": 1, "着払い(購入者負担)": 2} , {} , { class: "detail__pull-down"}
         %i.fas.fa-chevron-down.arrow-down
+
         .detail__subtitle 配送の方法
         %span.essential-icon 必須
         = f.select :shipping_way, { "---": nil, 未定: 1, クロネコヤマト: 2, ゆうパック: 3, ゆうメール: 4} , {} , { class: "detail__pull-down"}
         %i.fas.fa-chevron-down.arrow-down
+
         .detail__subtitle 発送元の地域
         %span.essential-icon 必須
         = f.select :shipping_place, { "---": nil, 北海道: 1, 東京: 2 }, {} , { class: "detail__pull-down"}
         %i.fas.fa-chevron-down.arrow-down
+
         .detail__subtitle 発送までの日数
         %span.essential-icon 必須
         = f.select :shipping_date, { "---": nil,"1~2日で発送": 1, "2~3日で発送": 2, "4~7日で発送": 3 }, {} , { class: "detail__pull-down"}
         %i.fas.fa-chevron-down.arrow-down
+
     .detail
       .detail__title 販売価格(300〜9,999,999)
       .question-icon ?
@@ -70,11 +82,14 @@
           %span.essential-icon 必須
           %span.yen ¥
           = f.text_field :price, class: "detail__price-input", placeholder: "例) 300"
+
         .detail-container__sub
           .detail__commission 販売手数料 (10%)
+
         .detail-container
           .detail__profit 販売利益
           .detail__profit--bar -
+          
     .sell-box
       .sell-box__description--link
         = link_to "禁止されている出品"
