@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'jp/index'
 
 
-  root 'products#show'
+  root 'products#new'
   resources :products, only: [:show, :index,:new ,:create]
   resources :users, only: [:edit] do
     member do
