@@ -5,12 +5,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    super
+  end
 
   # POST /resource
   def create
+    # binding.pry
     kanji_last_name = params[:kanji_name][0][:last]
     kanji_first_name = params[:kanji_name][0][:first]
     kanji_name = "#{kanji_last_name}#{kanji_first_name}"

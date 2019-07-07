@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
-  root 'registrations#create'
+
+  devise_scope :user do
+    root 'users/registrations#new'
+  end
+
   resources :products, only: [:show, :index, :create]
   resources :users, only: [:edit] do
     member do
