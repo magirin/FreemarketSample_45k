@@ -33,10 +33,10 @@
     = f.label :kana_name, "名カナ（全角）"
     %br/
     = f.text_field :kana_name, name: "kana_name[][first]", autofocus: true, placeholder: "例)アヤ"
-  -# .field
-  -#   = f.label :birth_of_date, "生年月日"
-  -#   %br/
-  -#   = f.date_select(:birth_of_date, use_month_numbers: true, date_separator: '　', end_year: 1900, start_year: Time.now.year, include_blank: true)
+  .field
+    = f.label :birth_of_date, "生年月日"
+    %br/
+    = f.date_select(:birth_of_date, use_month_numbers: true, date_separator: '　', end_year: 1900, start_year: Time.now.year, include_blank: true)
   .actions
     = f.submit "Sign up"
 = render "users/shared/links"

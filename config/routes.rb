@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   }
   get 'jp/index'
   root 'jp#index'
-  root 'products#index'
   resources :products, only: [:show, :index, :create, :new]
+  devise_scope :user do
+    root 'users/registrations#new'
+  end
   resources :users, only: [:edit] do
     member do
       get 'identification'
