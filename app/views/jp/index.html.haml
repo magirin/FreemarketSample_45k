@@ -3,12 +3,10 @@
   %h2 ピックアップカテゴリー
   %h3
     %a{:href => "#"} レディース 新着アイテム
-    = link_to products_path, products_path , method: :post
   .pickup__items
     = render "shared/pickup"
-    = render "shared/pickup"
-    = render "shared/pickup"
-    = render "shared/pickup"
+  .pickup__allitems
+    %a{:href => "#"} すべての商品を見る
 #main_visual
   .main_visual_in
     %div

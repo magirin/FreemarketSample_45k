@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    @products = Product.where("category_id=1").order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
