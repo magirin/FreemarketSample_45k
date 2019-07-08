@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
-  get 'jp/index'
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
 
-  devise_for :users
+  get 'jp/index'
   root 'jp#index'
-  resources :products, only: [:show, :index,:new ,:create]
+  resources :products, only: [:show, :index, :create, :new]
+  devise_scope :user do
+    root 'users/registrations#new'
+  end
+
   resources :users, only: [:edit] do
     member do
       get 'identification'
