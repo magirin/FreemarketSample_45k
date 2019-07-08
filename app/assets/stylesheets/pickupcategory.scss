@@ -13,9 +13,11 @@
   align-items: center;
   justify-content: center;
 }
-.pickup__allitems a{
-  font-size: 15px;
+.pickup__allitems {
   text-align: right;
+  & a{
+    font-size: 15px;
+  }
 }
 .pickup__items-item{
   width: 212px;
