@@ -13,8 +13,13 @@
   align-items: center;
   justify-content: center;
 }
+.pickup__allitems {
+  text-align: right;
+  & a{
+    font-size: 15px;
+  }
+}
 .pickup__items-item{
-  height: 330px;
   width: 212px;
 }
 .pickup__items-item-outline{
