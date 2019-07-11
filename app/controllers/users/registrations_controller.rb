@@ -20,10 +20,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
     kana_first_name = params[:kana_name][0][:first]
     kana_name = "#{kana_last_name}#{kana_first_name}"
     params[:user][:kana_name] = kana_name
+    # year = params[:user]["birth_of_date(1i)"]
+    # month = params[:user]["birth_of_date(2i)"]
+    # date = params[:user]["birth_of_date(3i)"]
+    # bod = "#{year}/#{month}/#{date}"
+    # params[:user][:birth_of_date] = bod
     super
     # User.create(nickname: params[:nickname], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation], kanji_name: params[:kanjiname], kana_name: params[:kana_name])
     if @user.save
-      redirect_to root
+      redirect_to roots
     end
   end
 
