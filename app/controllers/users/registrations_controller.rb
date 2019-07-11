@@ -23,7 +23,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super
     # User.create(nickname: params[:nickname], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation], kanji_name: params[:kanjiname], kana_name: params[:kana_name])
     if @user.save
-      redirect_to new_user_session_path
+      redirect_to root
     end
   end
 
