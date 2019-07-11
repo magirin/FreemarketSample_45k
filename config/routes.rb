@@ -10,11 +10,11 @@ Rails.application.routes.draw do
     root 'users/registrations#new'
   end
 
-  resources :users, only: [:edit] do
-    member do
-      get 'identification'
-      get 'profile'
-      get 'logout'
-    end
-  end
+  # resources :users, only: [:edit] do
+  #   member do
+  #     get 'identification'
+  #     get 'profile'
+  #     get 'logout'
+  #   end
+  # end
 end
