@@ -29,7 +29,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     binding.pry
     # User.create(nickname: params[:nickname], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation], kanji_name: params[:kanjiname], kana_name: params[:kana_name])
     if @user.save
-      redirect_to roots
+      redirect_to root_path
     end
   
   end
