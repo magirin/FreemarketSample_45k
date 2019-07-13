@@ -1,59 +1,90 @@
 * {
   box-sizing: border-box;
 }
-.header__top, .header__bottom {
-  display: flex;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
+
+.header{
+  height: 100px;
+  width: 100vw;
+  background-color: white;
+
+  &__top{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+
+    &--right{
+      margin-top: 20px;
+    }
+  }
+
+  &__bottom{
+    width: 90%;
+    display: flex;
+    margin-left: 6.5%;
+    align-items: center;
+    background-color: white;
+    height: 50px;
+    left: 30px;
+
+    &--left{
+      display: flex;
+      position: relative;
+    }
+
+    &--right{
+      display: flex;
+      margin-left: 380px;
+    }
+  }
 }
-.header__top-right {
-  margin-top: 35px;
+
+.product-search{
+  width: 780px;
+  height: 40px;
+  margin: 0 0 15px 15px;
 }
-.header__bottom-left {
-  display: flex;
-  position: relative;
+
+.header-mercari-icon{
+  vertical-align: middle;
 }
-.header__bottom-right {
-  display: flex;
-}
+
 .sign_in_btn {
   background-color: #ff0000;
   border-radius: 5px;
   border: solid 2px #ff0000;
   color: #ffffff;
-  display: inline-block;
   font-size: 12px;
-  line-height: 40px;
-  margin-top: 28px;
-  padding: 0px 20px;
+  height: 32px;
   text-align: center;
-  width: 150px;
+  padding: 10px;
+  width: 110px;
 }
+
 .new_user_btn {
   border-radius: 5px;
   border: solid 2px #1e90ff;
   color: #1e90ff;
-  display: inline-block;
   font-size: 12px;
-  line-height: 40px;
-  margin-top: 28px;
-  padding: 0px 20px;
+  height: 32px;
   text-decoration: none;
   text-align: center;
-  width: 150px;
+  padding: 10px;
+  width: 100px;
 }
 .new_user_btn:hover {
   background: #1e90ff;
   color: #ffffff;
 }
 .search-icon{
-  background: #696969;
-  color: #ffffff;
   height: 20px;
   width: 20px;
+  position: relative;
+  right: 40px;
 }
-.fa-list.header__bottom-left--itemcategory-list, .header__bottom-left--itemcategory-brand{
+.fa-list.header__bottom--left--itemcategory-list, .header__bottom--left--itemcategory-brand{
   color: #dc143c;
 }
 #category, #bland {
@@ -66,7 +97,7 @@
   display: flex;
   list-style-type: none;
   position: relative;
-  width: 250px;
+  width: 160px;
 }
 #category a, #bland a {
   color: #000000;
@@ -74,11 +105,20 @@
   font-weight: bold;
   text-decoration: none;
 }
-#category ul, #bland ul {
+#category ul{
   background-color: #ffffff;
   display:none;
   margin: 0px;
   margin-top: 15px;
+  padding: 0px;
+  position: absolute;
+  width: 250px;
+}
+
+#bland ul {
+  background-color: #ffffff;
+  display:none;
+  margin: 15px 0 0 30px;
   padding: 0px;
   position: absolute;
   width: 250px;
