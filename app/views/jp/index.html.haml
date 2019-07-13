@@ -1,12 +1,12 @@
 = render "shared/header"
 .pickup
-  %h2 商品一覧
+  %h2 ピックアップカテゴリー
+  %h3
+    %a{:href => "#"} レディース 新着アイテム
   .pickup__items
     = render "shared/pickup"
-  = paginate(@products)
-.category
-  .category__name カテゴリ名
-  .category__namedescription 説明文
+  .pickup__allitems
+    %a{:href => "#"} すべての商品を見る
 #main_visual
   .main_visual_in
     %div
@@ -15,6 +15,6 @@
       = image_tag "banner-camp.jpg", alt: "s2"
     %div
       = image_tag "banner-natsukashi.jpg", alt: "s3"
-= render "shared/banner"
-= render "shared/footer"
+=render "shared/banner"
+=render "shared/footer"
 = render 'shared/sell_btn'

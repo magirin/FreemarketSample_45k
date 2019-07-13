@@ -37,6 +37,16 @@ ActiveRecord::Schema.define(version: 20190702115149) do
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
+  create_table "credit_cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "credit_number",          null: false
+    t.integer  "credit_security_number", null: false
+    t.integer  "credit_expire_date",     null: false
+    t.integer  "user_id",                null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["user_id"], name: "index_credit_cards_on_user_id", using: :btree
+  end
+
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",            null: false
     t.integer  "sub_category_id", null: false
@@ -121,14 +131,14 @@ ActiveRecord::Schema.define(version: 20190702115149) do
     t.string   "kanji_name",             limit: 70,              null: false
     t.string   "kana_name",              limit: 70,              null: false
     t.string   "nickname",               limit: 20,              null: false
-    t.integer  "birth_of_date",                                  null: false
-    t.string   "prefecture",                                     null: false
-    t.string   "address",                                        null: false
-    t.string   "profile",                                        null: false
-    t.integer  "credit_number",                                  null: false
-    t.integer  "credit_security_number",                         null: false
-    t.integer  "credit_expire_date",                             null: false
-    t.string   "phone_number",                                   null: false
+    t.integer  "birth_of_date"
+    t.string   "prefecture"
+    t.string   "address"
+    t.string   "profile"
+    t.integer  "credit_number"
+    t.integer  "credit_security_number"
+    t.integer  "credit_expire_date"
+    t.string   "phone_number"
     t.string   "timestamps"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

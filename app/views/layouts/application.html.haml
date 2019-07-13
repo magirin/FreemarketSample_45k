@@ -6,22 +6,7 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    / %link{:href => "./slick.scss", :rel => "stylesheet", :type => "text/css"}/
-    / %link{:href => "./slick-theme.scss", :rel => "stylesheet", :type => "text/css"}/
-    / %script{:src => "./slick.min.js", :type => "text/javascript"}
-    / %script{:src => "./slick.js", :type => "text/javascript"}
-
-    / %link{href: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css", rel: "stylesheet", type: "text/css"}/
-    / %script{src: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", type: "text/javascript"}
-
     %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.8.2/css/all.css", :integrity => "sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay", :rel => "stylesheet"}/
     %link{:href => "https://use.fontawesome.com/releases/v5.6.1/css/all.css", :rel => "stylesheet"}/
-
-    / %script{:src => "./js/jquery-1.12.4.min.js", :type => "text/javascript"}
-    / %script{:src => "./js/jquery-migrate-1.4.1.min.js", :type => "text/javascript"}
-    / %script{:src => "./javascripts/slick.min.js", :type => "text/javascript"}
-    / %link{:href => "./stylesheets/slick.scss", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
-    / %link{:href => "./css/slick-theme.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
-
   %body
     = yield

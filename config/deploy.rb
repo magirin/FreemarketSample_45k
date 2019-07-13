@@ -2,8 +2,8 @@
 lock "~> 3.11.0"
 
 set :linked_files, %w{ config/secrets.yml }
-set :application, "freemarket_sample_45k"
-set :repo_url, "git@github.com:lpgmsw/freemarket_sample_45k.git"
+set :application, "FreemarketSample_45k"
+set :repo_url, "git@github.com:lpgmsw/FreemarketSample_45k.git"
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
@@ -23,7 +23,9 @@ set :default_env, {
   username: ENV["BASIC_AUTH_USER"],
   password: ENV["BASIC_AUTH_PASSWORD"],
   AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
-  AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
+  AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"],
+  BASIC_AUTH_USER: ENV["BASIC_AUTH_USER"],
+  BASIC_AUTH_PASSWORD: ENV["BASIC_AUTH_PASSWORD"]
 }
 
 after 'deploy:publishing', 'deploy:restart'
