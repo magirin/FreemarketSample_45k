@@ -46,7 +46,7 @@
         .detail-container-pack
           .detail__subtitle 商品の状態
           %span.essential-icon 必須
-          = f.select :product_quality, { "---": nil, 新品、未使用: 1, 目立った傷や汚れなし: 2, やや傷や汚れあり: 3, 傷や汚れあり: 4, 全体的に状態が悪い: 5 }, {} ,{ class: "detail__pull-down" }
+          = f.select :product_quality, { "---": nil, "新品、未使用": 1, "目立った傷や汚れなし": 2, "やや傷や汚れあり": 3, "傷や汚れあり": 4, "全体的に状態が悪い": 5 }, {} ,{ class: "detail__pull-down" }
           %i.fas.fa-chevron-down.arrow-down
     .detail
       .detail__title 配送について
@@ -61,13 +61,13 @@
         .detail-container-pack  
           .detail__subtitle 配送の方法
           %span.essential-icon 必須
-          = f.select :shipping_way, { "---": nil, 未定: 1, クロネコヤマト: 2, ゆうパック: 3, ゆうメール: 4} , {} , { class: "detail__pull-down"}
+          = f.select :shipping_way, { "---": nil, "未定": 1, "クロネコヤマト": 2, "ゆうパック": 3, "ゆうメール": 4} , {} , { class: "detail__pull-down"}
           %i.fas.fa-chevron-down.arrow-down
 
         .detail-container-pack  
           .detail__subtitle 発送元の地域
           %span.essential-icon 必須
-          = f.select :shipping_place, { "---": nil, 北海道: 1, 東京: 2 }, {} , { class: "detail__pull-down"}
+          = f.select :shipping_place, { "---": nil, "北海道": 1, "東京": 2 }, {} , { class: "detail__pull-down"}
           %i.fas.fa-chevron-down.arrow-down
 
         .detail-container-pack  

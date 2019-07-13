@@ -10,8 +10,8 @@ class ProductsController < ApplicationController
 
   def create
     # @product = Product.new
-    Product.create(set_product_params)
     binding.pry
+    Product.create(set_product_params)
     # if @product.create
     #   redirect_to root_path, notice: '商品が出品されました'
     # end
