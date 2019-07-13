@@ -9,11 +9,11 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.create!(set_product_params)
+    # @product = Product.new
     binding.pry
-    if @product.create
-      redirect_to root_path, notice: '商品が出品されました'
-    end
+    # if @product.create
+    #   redirect_to root_path, notice: '商品が出品されました'
+    # end
   end
 
   def edit
@@ -31,7 +31,8 @@ class ProductsController < ApplicationController
   private
 
   def set_product_params
-    params.require(:product).permit(:name, :description, :category_id, :sub_category_id, :item_id, :bland_id, :size, :product_quality, :shipping_price, :shipping_way, :shipping_place, :shipping_date, :price).merge(user_id: current_user.id)
+    params.require(:product)
+    # .permit(:name, :description, :category_id, :sub_category_id, :item_id, :bland_id, :size, :product_quality, :shipping_price, :shipping_way, :shipping_place, :shipping_date, :price).merge(user_id: current_user.id)
   end
 
 end
