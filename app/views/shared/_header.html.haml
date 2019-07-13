@@ -1,19 +1,19 @@
 .header
   .header__top
-    .header__top-left
+    .header__top--left
       %a{:href => "#"}
-        = image_tag "logo.svg", size: "134x36", alt: "ロゴ"
-    .header__top-right
+        = image_tag "logo.svg", size: "134x36", alt: "ロゴ", class: "header-mercari-icon"
+    .header__top--right
       %form{:action => "#", :method => "post"}
         %div
-          %input{:name => "search", :placeholder => "何かお探しですか？", :size => "50", :type => "search"}/
-          = fa_icon 'search', class: 'search-icon'
+          %input{name: "search", placeholder: "何かお探しですか？", size: "50", type: "search", class: "product-search"}
+            = fa_icon 'search', class: 'search-icon'
   .header__bottom
-    .header__bottom-left
-      .header__bottom-left--item-category
+    .header__bottom--left
+      .header__bottom--left--item-category
         %ul#category
           %li
-            %i.fas.fa-list.header__bottom-left--itemcategory-list
+            %i.fas.fa-list.header__bottom--left--itemcategory-list
             %a{:href => "#"} カテゴリーから探す
             %ul.child
               %li
@@ -120,6 +120,7 @@
                 %a{:href => "#"} アディダス
               %li
                 %a{:href => "#"} カテゴリー一覧
-    .header__bottom-right
-      %a.sign_in_btn{:href => "#"} ログイン
-      %a.new_user_btn{:href => "#"} 新規会員登録
+    .header__bottom--right
+      %a.new_user_btn{:href => "users/sign_up"} ログイン
+      %a.sign_in_btn{:href => "users/sign_in"} 新規会員登録
+
