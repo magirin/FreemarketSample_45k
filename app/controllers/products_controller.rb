@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
 
   def create
     # @product = Product.new
+    Product.create(set_product_params)
     binding.pry
     # if @product.create
     #   redirect_to root_path, notice: '商品が出品されました'
@@ -31,8 +32,8 @@ class ProductsController < ApplicationController
   private
 
   def set_product_params
-    params.require(:product)
-    # .permit(:name, :description, :category_id, :sub_category_id, :item_id, :bland_id, :size, :product_quality, :shipping_price, :shipping_way, :shipping_place, :shipping_date, :price).merge(user_id: current_user.id)
+    params.require(:product).permit(:name, :description, :category_id, :sub_category_id, :item_id, :bland_id, :size, :product_quality, :shipping_price, :shipping_way, :shipping_place, :shipping_date, :price)
+    # .merge(user_id: current_user.id)
   end
 
 end

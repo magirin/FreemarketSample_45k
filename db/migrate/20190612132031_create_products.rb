@@ -3,7 +3,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
     create_table :products do |t|
       t.string :name, null: false, limit: 40,index: true 
       t.integer :price, null: false, limit: 7
-      t.string :size, null: false 
+      t.integer :size, null: false 
       t.string :description, null: false, limit: 1000 
       t.integer :favorite 
       t.string :product_quality, null: false 
