@@ -6,7 +6,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.integer :size, null: false 
       t.string :description, null: false, limit: 1000 
       t.integer :favorite 
-      t.string :product_quality, null: false 
+      t.integer :product_quality, null: false 
       t.integer :shipping_price, null: false 
       t.integer :shipping_way, null: false 
       t.integer :shipping_place, null: false 

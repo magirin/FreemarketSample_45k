@@ -41,12 +41,12 @@
         .detail-container-pack  
           .detail__subtitle サイズ
           %span.essential-icon 必須
-          = f.select :size, { "---": nil, "XXS以下": 1, "XS(SS)": 2, "S": 3, "M": 4, "L": 5, "L": 6, "XL": 7, "2XL": 8, "3XL": 9, "4XL(5L)": 10, "FREE SIZE": 11} , {} , { class: "detail__pull-down"}
+          = f.select :size, { "---": nil, "XXS以下": 0, "XS(SS)": 1, "S": 2, "M": 3, "L": 4, "L": 5, "XL": 6, "2XL": 7, "3XL": 8, "4XL(5L)": 9, "FREE SIZE": 10} , {} , { class: "detail__pull-down"}
           %i.fas.fa-chevron-down.arrow-down
         .detail-container-pack
           .detail__subtitle 商品の状態
           %span.essential-icon 必須
-          = f.select :product_quality, { "---": nil, "新品、未使用": 1, "目立った傷や汚れなし": 2, "やや傷や汚れあり": 3, "傷や汚れあり": 4, "全体的に状態が悪い": 5 }, {} ,{ class: "detail__pull-down" }
+          = f.select :product_quality, { "---": nil, "新品、未使用": 0, "目立った傷や汚れなし": 1, "やや傷や汚れあり": 2, "傷や汚れあり": 3, "全体的に状態が悪い": 4}, {} ,{ class: "detail__pull-down" }
           %i.fas.fa-chevron-down.arrow-down
     .detail
       .detail__title 配送について
@@ -55,25 +55,25 @@
         .detail-container-pack  
           .detail__subtitle 配送料の負担
           %span.essential-icon 必須
-          = f.select :shipping_price, { "---": nil, "送料込み(出品者負担)": 1, "着払い(購入者負担)": 2} , {} , { class: "detail__pull-down"}
+          = f.select :shipping_price, { "---": nil, "送料込み(出品者負担)": 0, "着払い(購入者負担)": 1} , {} , { class: "detail__pull-down"}
           %i.fas.fa-chevron-down.arrow-down
 
         .detail-container-pack  
           .detail__subtitle 配送の方法
           %span.essential-icon 必須
-          = f.select :shipping_way, { "---": nil, "未定": 1, "クロネコヤマト": 2, "ゆうパック": 3, "ゆうメール": 4} , {} , { class: "detail__pull-down"}
+          = f.select :shipping_way, { "---": nil, "未定": 0, "クロネコヤマト": 1, "ゆうパック": 2, "ゆうメール": 3} , {} , { class: "detail__pull-down"}
           %i.fas.fa-chevron-down.arrow-down
 
         .detail-container-pack  
           .detail__subtitle 発送元の地域
           %span.essential-icon 必須
-          = f.select :shipping_place, { "---": nil, "北海道": 1, "東京": 2 }, {} , { class: "detail__pull-down"}
+          = f.select :shipping_place, { "---": nil, "北海道": 0, "東京": 1}, {} , { class: "detail__pull-down"}
           %i.fas.fa-chevron-down.arrow-down
 
         .detail-container-pack  
           .detail__subtitle 発送までの日数
           %span.essential-icon 必須
-          = f.select :shipping_date, { "---": nil,"1~2日で発送": 1, "2~3日で発送": 2, "4~7日で発送": 3 }, {} , { class: "detail__pull-down"}
+          = f.select :shipping_date, { "---": nil,"1~2日で発送": 0, "2~3日で発送": 1, "4~7日で発送": 2 }, {} , { class: "detail__pull-down"}
           %i.fas.fa-chevron-down.arrow-down
           
     .detail
