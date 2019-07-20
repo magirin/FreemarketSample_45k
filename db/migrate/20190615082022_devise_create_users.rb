@@ -9,7 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :kanji_name, null: false, limit: 70 
       t.string :kana_name, null: false, limit: 70 
       t.string :nickname, null: false, limit: 20 
-      t.integer :birth_of_date, null: true
+      t.string :birth_of_date, null: false
       t.string :prefecture, null: true
       t.string :address, null: true
       t.string :profile, null: true

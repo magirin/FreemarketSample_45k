@@ -130,7 +130,7 @@ ActiveRecord::Schema.define(version: 20190702115149) do
     t.string   "kanji_name",             limit: 70,              null: false
     t.string   "kana_name",              limit: 70,              null: false
     t.string   "nickname",               limit: 20,              null: false
-    t.integer  "birth_of_date"
+    t.string   "birth_of_date",                                  null: false
     t.string   "prefecture"
     t.string   "address"
     t.string   "profile"
