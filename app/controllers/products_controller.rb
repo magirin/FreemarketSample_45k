@@ -6,15 +6,16 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @image = ProductImage.new
   end
 
   def create
     # @product = Product.new
+    product_params = params_int(set_product_params)
+    Product.create(product_params)
     binding.pry
-    Product.create(set_product_params)
-    # if @product.create
-    #   redirect_to root_path, notice: '商品が出品されました'
-    # end
+    # Product_image.create(set_product_image_params)
+    redirect_to root_path, notice: '商品が出品されました'
   end
 
   def edit
@@ -32,8 +33,20 @@ class ProductsController < ApplicationController
   private
 
   def set_product_params
-    params.require(:product).permit(:name, :description, :category_id, :sub_category_id, :item_id, :bland_id, :size, :product_quality, :shipping_price, :shipping_way, :shipping_place, :shipping_date, :price)
-    # .merge(user_id: current_user.id)
+    params.require(:product).permit(:name, :description, :category_id, :sub_category_id, :item_id, :bland_id, :size, :product_quality, :shipping_price, :shipping_way, :shipping_place, :shipping_date, :price).merge(user_id: 1)
+  end
+
+  def params_int(product_params)
+    product_params.each do |key,value|
+      if product_params[key] != product_params[:name] || product_params[key] != product_params[:description]
+        product_params[key]=value.to_s
+      end
+    end
+  end
+
+
+  def set_product_image_params
+    params.require(:product).permit(:image).merge(product_id: id)
   end
 
 end
