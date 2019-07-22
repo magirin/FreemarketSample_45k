@@ -46,7 +46,7 @@ class ProductsController < ApplicationController
 
 
   def set_product_image_params
-    params.require(:product).permit(:image).merge(product_id: id)
+    params.require(:product_image).permit(:image).merge(product_id: 1)
   end
 
 end
