@@ -14,5 +14,5 @@ class Product < ApplicationRecord
     has_many :images
     has_many :productimages
     has_many :comments
-    accepts_nested_attributes_for :images
+    accepts_nested_attributes_for :product_image
 end
