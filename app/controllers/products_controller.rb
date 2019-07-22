@@ -38,7 +38,7 @@ class ProductsController < ApplicationController
 
   def params_int(product_params)
     product_params.each do |key,value|
-      if product_params[key] != product_params[:name] || product_params[key] != product_params[:description]
+      if key != "name"
         product_params[key] = value.to_i
       end
     end
