@@ -8,8 +8,9 @@
         %span.essential-icon 必須
         .upload-box__description 最大10枚までアップロードできます
         .upload-box__upload-box ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード
-        = f.fields_for :product_image do |ff|
-          = ff.file_field :image, multiple: true, class: 'upload-box__upload-box'
+        -# = f.fields_for :product_image do |ff|
+        -#   = ff.file_field :image, multiple: true, class: 'upload-box__upload-box'
+        = f.file_field :image, multiple: true, class: 'upload-box__upload-box'
     .content
 
       .content__name 商品名

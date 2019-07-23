@@ -12,7 +12,8 @@ class Product < ApplicationRecord
     has_one :region
     has_many :categorys
     has_many :images
-    has_many :productimages
+    has_many :product_images
     has_many :comments
-    accepts_nested_attributes_for :product_image
+    accepts_nested_attributes_for :product_images
+    mount_uploader :product_image, ImageUploader
 end
