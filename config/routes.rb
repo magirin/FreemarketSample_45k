@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   get 'jp/index'
   root 'jp#index'
-  resources :products, only: [:show, :index, :create, :new]
+  resources :products, only: [:show, :index, :create, :new] do
+    resources :product_images, only: [:create]
+  end
   devise_scope :user do
     root 'users/registrations#new'
   end

@@ -15,5 +15,4 @@ class Product < ApplicationRecord
     has_many :product_images
     has_many :comments
     accepts_nested_attributes_for :product_images
-    mount_uploader :product_image, ImageUploader
 end

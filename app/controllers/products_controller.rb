@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
   def create
     # @product = Product.new
     product_params = params_int(set_product_params)
-    # image_params = set_product_image_params
+    # ProductImage.create(set_product_image_params)
     Product.create(product_params)
     binding.pry
     # Product_image.create(set_product_image_params)
@@ -34,12 +34,22 @@ class ProductsController < ApplicationController
   private
 
   def set_product_params
-    params.require(:product).permit(:name, :description, :category_id, :sub_category_id, :item_id, :bland_id, :size, :product_quality, :shipping_price, :shipping_way, :shipping_place, :shipping_date, :price, :image).merge(user_id: 1)
+    params.require(:product).permit(:name, 
+                                    :description,
+                                    :category_id,
+                                    :sub_category_id,
+                                    :item_id, :bland_id,
+                                    :size, :product_quality,
+                                    :shipping_price,
+                                    :shipping_way,
+                                    :shipping_place,
+                                    :shipping_date,
+                                    :price).merge(user_id: 1)
   end
 
   def params_int(product_params)
     product_params.each do |key,value|
-      unless key == "name" || key == "description"
+      unless key == "name" || key == "description" || key == "product_image"
         product_params[key] = value.to_i
       end
     end
@@ -47,7 +57,7 @@ class ProductsController < ApplicationController
 
 
   def set_product_image_params
-    params.require(:product_image).permit(:image).merge(user_id: 1)
+    params.require(:product).permit(product_image: [image: {}])
   end
 
 end
