@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @image = ProductImage.new
+    @product_image = @product.product_images.build
   end
 
   def create
@@ -49,7 +49,7 @@ class ProductsController < ApplicationController
 
   def params_int(product_params)
     product_params.each do |key,value|
-      unless key == "name" || key == "description" || key == "product_image"
+      unless key == "name" || key == "description" || key == "product_image" || key == "image"
         product_params[key] = value.to_i
       end
     end
@@ -57,7 +57,7 @@ class ProductsController < ApplicationController
 
 
   def set_product_image_params
-    params.require(:product).permit(product_image: [image: {}])
+    params.require(:product_image).permit(product_images_attributes: [:product_image [:image]]).merge(user_id: 1).merge(product_id: 1).merge(image: params[:product_image][:image])
   end
 
 end
