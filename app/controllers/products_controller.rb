@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @product = @product.product_images.build
+    @product_image = @product.product_images.build
   end
 
   def create
@@ -14,6 +14,7 @@ class ProductsController < ApplicationController
     product_params = params_int(set_product_params)
     binding.pry
     Product.create(product_params)
+    # ProductImage.create(product_image_params)
     # Product_image.create(set_product_image_params)
     redirect_to root_path, notice: '商品が出品されました'
   end
@@ -46,7 +47,7 @@ class ProductsController < ApplicationController
                                     :shipping_place,
                                     :shipping_date,
                                     :price,
-                                    product_image_attributes: {image: []}).merge(user_id: 1)
+                                    product_images_attributes: [:id, :product_id, :image, :user_id]).merge(user_id: 1)
   end
 
   def params_int(product_params)
@@ -57,7 +58,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  def set_product_image_params
+  def product_image_params
     params.require(:product_image).permit({image: []}).merge(user_id: 1).merge(product_id: 1)
   end
 
