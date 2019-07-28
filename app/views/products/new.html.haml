@@ -8,7 +8,8 @@
         %span.essential-icon 必須
         .upload-box__description 最大10枚までアップロードできます
         .upload-box__upload-box ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード
-        = f.file_field :image, class: 'upload-box__upload-box'
+        = f.fields_for :product_image do |ff|
+          = ff.file_field :image, class: 'upload-box__upload-box'
     .content
       .content__name 商品名
       %span.essential-icon 必須
@@ -31,11 +32,11 @@
           - sub_category_id = 1
           = f.collection_select :item_id, Item.where(sub_category_id: sub_category_id), :id, :name, { include_blank: true , selected: '---'}, { class: "detail__pull-down" }
           %i.fas.fa-chevron-down.arrow-down
-        .detail-container-pack  
+        .detail-container-pack
           .detail__subtitle ブランド
           %span.optional-icon 任意
           = f.text_field :bland_id, class: "detail__pull-down", placeholder: "例) シャネル"
-        .detail-container-pack  
+        .detail-container-pack
           .detail__subtitle サイズ
           %span.essential-icon 必須
           = f.select :size, { "---": nil, "XXS以下": 1, "XS(SS)": 2, "S": 3, "M": 4, "L": 5, "L": 6, "XL": 7, "2XL": 8, "3XL": 9, "4XL(5L)": 10, "FREE SIZE": 11} , {} , { class: "detail__pull-down"}
@@ -49,30 +50,30 @@
       .detail__title 配送について
       .question-icon ?
       .detail-container
-        .detail-container-pack  
+        .detail-container-pack
           .detail__subtitle 配送料の負担
           %span.essential-icon 必須
           = f.select :shipping_price, { "---": nil, "送料込み(出品者負担)": 1, "着払い(購入者負担)": 2} , {} , { class: "detail__pull-down"}
           %i.fas.fa-chevron-down.arrow-down
 
-        .detail-container-pack  
+        .detail-container-pack
           .detail__subtitle 配送の方法
           %span.essential-icon 必須
           = f.select :shipping_way, { "---": nil, 未定: 1, クロネコヤマト: 2, ゆうパック: 3, ゆうメール: 4} , {} , { class: "detail__pull-down"}
           %i.fas.fa-chevron-down.arrow-down
 
-        .detail-container-pack  
+        .detail-container-pack
           .detail__subtitle 発送元の地域
           %span.essential-icon 必須
           = f.select :shipping_place, { "---": nil, 北海道: 1, 東京: 2 }, {} , { class: "detail__pull-down"}
           %i.fas.fa-chevron-down.arrow-down
 
-        .detail-container-pack  
+        .detail-container-pack
           .detail__subtitle 発送までの日数
           %span.essential-icon 必須
           = f.select :shipping_date, { "---": nil,"1~2日で発送": 1, "2~3日で発送": 2, "4~7日で発送": 3 }, {} , { class: "detail__pull-down"}
           %i.fas.fa-chevron-down.arrow-down
-          
+
     .detail
       .detail__title 販売価格(300〜9,999,999)
       .question-icon ?

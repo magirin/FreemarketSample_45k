@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :comments
   has_many :products
   has_many :sold_products
+  has_many :cards
 end
