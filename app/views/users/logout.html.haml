@@ -3,7 +3,8 @@
 %main.mypage-main
   .mypage-content
     .logout
-      .logout__button ログアウト
+      .logout__button
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
     = render 'shared/sell_btn'
   = render 'shared/mypage_sidebar'
 =render "shared/banner"

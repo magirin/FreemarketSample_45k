@@ -1,42 +1,46 @@
-%h2 会員情報入力
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :nickname, "ニックネーム"
-    %br/
-    = f.text_field :nickname, autofocus: true, placeholder: "例)メルカリ太郎"
-  .field
-    = f.label :email, "メールアドレス"
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "例) PC・携帯どちらでも可"
-  .field
-    = f.label :password, "パスワード"
-    %br/
-    = f.password_field :password, autocomplete: "new-password", placeholder: "(#{@minimum_password_length}文字以上)"
-  .field
-    = f.label :password_confirmation, "パスワード（確認）"
-    %br/
-    = f.password_field :password_confirmation, placeholder: "(#{@minimum_password_length}文字以上)"
-  .field
-    = f.label :kanji_name, "姓（全角）"
-    %br/
-    = f.text_field :kanji_name, name: "kanji_name[][last]", autofocus: true, placeholder: "例)山田"
-  .field
-    = f.label :kanji_name, "名（全角）"
-    %br/
-    = f.text_field :kanji_name, name: "kanji_name[][first]", autofocus: true, placeholder: "例)彩"
-  .field
-    = f.label :kana_name, "姓カナ（全角）"
-    %br/
-    = f.text_field :kana_name, name: "kana_name[][last]", autofocus: true, placeholder: "例)ヤマダ"
-  .field
-    = f.label :kana_name, "名カナ（全角）"
-    %br/
-    = f.text_field :kana_name, name: "kana_name[][first]", autofocus: true, placeholder: "例)アヤ"
-  .field
-    = f.label :birth_of_date, "生年月日"
-    %br/
-    = f.date_select(:birth_of_date, use_month_numbers: true, date_separator: '　', end_year: 1900, start_year: Time.now.year, include_blank: true)
-  .actions
-    = f.submit "Sign up"
+= render partial: "shared/icon-header"
+.content-wrapper
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .content-wrapper__header 会員情報登録
+    .content
+      .content__name ニックネーム
+      %span.essential-icon 必須
+      = f.text_field :nickname, class: "content__form", autofocus: true, placeholder: "例)メルカリ太郎"
+      .content__name メールアドレス
+      %span.essential-icon 必須
+      = f.email_field :email, class: "content__form", autofocus: true, autocomplete: "email", placeholder: "例) PC・携帯どちらでも可"
+      .content__name パスワード
+      %span.essential-icon 必須
+      = f.password_field :password, class: "content__form", autocomplete: "new-password", placeholder: "(#{@minimum_password_length}文字以上)"
+      .content__name パスワード（確認）
+      %span.essential-icon 必須
+      = f.password_field :password_confirmation, class: "content__form", placeholder: "(#{@minimum_password_length}文字以上)"
+      .content__name 本人確認
+      .sell-box__description <br>安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+      .content__name 姓（全角）
+      %span.essential-icon 必須
+      = f.text_field :kanji_name, class: "content__form", name: "kanji_name[][last]", autofocus: true, placeholder: "例)山田"
+      .content__name 名（全角）
+      %span.essential-icon 必須
+      = f.text_field :kanji_name, class: "content__form", name: "kanji_name[][first]", autofocus: true, placeholder: "例)彩"
+      .content__name 姓カナ（全角）
+      %span.essential-icon 必須
+      = f.text_field :kana_name, class: "content__form", name: "kana_name[][last]", autofocus: true, placeholder: "例)ヤマダ"
+      .content__name 名カナ（全角）
+      %span.essential-icon 必須
+      = f.text_field :kana_name, class: "content__form", name: "kana_name[][first]", autofocus: true, placeholder: "例)アヤ"
+      .content__name 生年月日
+      %span.essential-icon 必須
+      = f.date_select(:birth_of_date, use_month_numbers: true, date_separator: '　', end_year: 1900, start_year: Time.now.year, include_blank: true)
+      .sell-box__description <br>※本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+      .sell-box__description 「次へ進む」のボタンを押すことにより、
+      .sell-box__description--link
+        = link_to "利用規約"
+      .sell-box__description に同意したものとみなします
+      .content-right__info--arrow
+        = link_to "本人情報の登録について>"
+    .actions
+      = f.submit "登録する", class: "sell-box__sell-button"
 = render "users/shared/links"
+= render "shared/sub-footer"

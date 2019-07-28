@@ -170,8 +170,19 @@ body{
       }
   }
 
-  &__action-button{
+  &__action-button--purchased{
     background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 16px;
+    text-align: center;
+    width: 620px;
+  }
+  &__action-button--notpurchased{
+    background-color: red;
     color: white;
     font-weight: bold;
     font-size: 18px;
