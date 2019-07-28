@@ -7,12 +7,12 @@ class Product < ApplicationRecord
     enum product_status: [['未購入'],['購入済み'],['取引中'] ]
 
 
-    belongs_to :user
+    belongs_to :user, optional: true
     has_one :bland
     has_one :region
     has_many :categorys
     has_many :images
-    has_many :product_images
+    has_one :product_image
     has_many :comments
-    accepts_nested_attributes_for :product_images
+    accepts_nested_attributes_for :product_image
 end

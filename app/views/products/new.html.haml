@@ -9,7 +9,7 @@
         .upload-box__description 最大10枚までアップロードできます
         .upload-box__upload-box ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード
         = f.fields_for :product_image do |ff|
-          = ff.file_field :image, class: 'upload-box__upload-box', name: "product_image[image][]"
+          = ff.file_field :image, class: 'upload-box__upload-box'
     .content
 
       .content__name 商品名
