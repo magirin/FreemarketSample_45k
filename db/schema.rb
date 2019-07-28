@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190702115149) do
+ActiveRecord::Schema.define(version: 20190716113643) do
 
   create_table "blands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "parent_id"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 20190702115149) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_blands_on_name", using: :btree
+  end
+
+  create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id"
+    t.string   "customer_id"
+    t.string   "card_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -37,16 +45,6 @@ ActiveRecord::Schema.define(version: 20190702115149) do
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
-  create_table "credit_cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "credit_number",          null: false
-    t.integer  "credit_security_number", null: false
-    t.integer  "credit_expire_date",     null: false
-    t.integer  "user_id",                null: false
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.index ["user_id"], name: "index_credit_cards_on_user_id", using: :btree
-  end
-
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",            null: false
     t.integer  "sub_category_id", null: false
@@ -56,38 +54,36 @@ ActiveRecord::Schema.define(version: 20190702115149) do
   end
 
   create_table "product_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "product_id", null: false
-    t.integer  "user_id",    null: false
+    t.integer  "product_id"
     t.string   "image",      null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_product_images_on_product_id", using: :btree
-    t.index ["user_id"], name: "index_product_images_on_user_id", using: :btree
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",            limit: 40,   null: false
-    t.bigint   "price",                        null: false
-    t.string   "size",                         null: false
-    t.string   "description",     limit: 1000, null: false
-    t.integer  "favorite",                     null: false
-    t.string   "product_quality",              null: false
-    t.integer  "shipping_price",               null: false
-    t.integer  "shipping_way",                 null: false
-    t.integer  "shipping_place",               null: false
-    t.integer  "shipping_date",                null: false
-    t.integer  "product_status",               null: false
-    t.integer  "user_id",                      null: false
+    t.string   "name",            limit: 40
+    t.bigint   "price"
+    t.string   "size"
+    t.string   "description",     limit: 1000
+    t.integer  "favorite"
+    t.string   "product_quality"
+    t.integer  "shipping_price"
+    t.integer  "shipping_way"
+    t.integer  "shipping_place"
+    t.integer  "shipping_date"
+    t.integer  "product_status"
+    t.integer  "user_id"
     t.integer  "bland_id"
-    t.integer  "category_id",                  null: false
-    t.integer  "sub_category_id",              null: false
-    t.integer  "item_id",                      null: false
+    t.integer  "category_id"
+    t.integer  "sub_category_id"
+    t.integer  "item_id"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.string   "purchasedflag"
     t.index ["bland_id"], name: "index_products_on_bland_id", using: :btree
     t.index ["category_id"], name: "index_products_on_category_id", using: :btree
     t.index ["item_id"], name: "index_products_on_item_id", using: :btree
-    t.index ["name"], name: "index_products_on_name", using: :btree
     t.index ["sub_category_id"], name: "index_products_on_sub_category_id", using: :btree
     t.index ["user_id"], name: "index_products_on_user_id", using: :btree
   end

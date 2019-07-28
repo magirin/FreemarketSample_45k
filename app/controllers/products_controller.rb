@@ -6,20 +6,24 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @product.build_product_image
   end
 
   def create
-    @product = Product.create!(set_product_params)
-    binding.pry
-    if @product.create
-      redirect_to root, notice: 'エラー'
-    end
+    product_params = params_int(set_product_params)
+    @product = Product.new(product_params)
+    @product.save!
+    redirect_to root_path, notice: '商品が出品されました'
   end
 
   def edit
   end
 
   def show
+    @product = Product.find(params[:id])
+    @exhibituser = User.find(@product.user_id)
+    @category = Category.find(@product.category_id)
+    @bland = Bland.find(@product.bland_id)
   end
 
   def update
@@ -31,7 +35,33 @@ class ProductsController < ApplicationController
   private
 
   def set_product_params
-    params.require(:product).permit(:name, :description, :category_id, :sub_category_id, :item_id, :bland_id, :size, :product_quality, :shipping_price, :shipping_way, :shipping_place, :shipping_date, :price)
+    params.require(:product).permit(:name,
+                                    :description,
+                                    :category_id,
+                                    :sub_category_id,
+                                    :item_id,
+                                    :bland_id,
+                                    :size,
+                                    :product_quality,
+                                    :shipping_price,
+                                    :shipping_way,
+                                    :shipping_place,
+                                    :shipping_date,
+                                    :price,
+                                    product_image_attributes: [:id, :product_id, :user_id, :image]).merge(user_id: current_user.id)
+  end
+
+  def params_int(product_params)
+    product_params.each do |key,value|
+      unless key == "name" || key == "description" || key == "product_image" || key == "image" || key == "product_image_attributes"
+        product_params[key] = value.to_i
+      end
+    end
+  end
+
+
+  def product_image_params
+    params.require(:product_image).permit({image: []}).merge(user_id: 1).merge(product_id: 1)
   end
 
 end
