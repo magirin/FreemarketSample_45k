@@ -49,7 +49,7 @@ class ProductsController < ApplicationController
                                     :shipping_place,
                                     :shipping_date,
                                     :price,
-                                    product_image_attributes: [:id, :product_id, :user_id, :image])
+                                    product_image_attributes: [:id, :product_id, :image])
   end
 
   def params_int(product_params)

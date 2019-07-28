@@ -1,6 +1,7 @@
 = render partial: "shared/icon-header"
 .content-wrapper
   = form_for @product do |f|
+    - @product.user_id << current_user.id
     .content-wrapper__header 商品情報を入力
     .upload-box
       .upload-container
