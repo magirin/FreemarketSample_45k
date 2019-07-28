@@ -1,0 +1,35 @@
+-data_key=ENV['PAYJP_PRIVATE_KEY']
+%main.mypage-main-buy
+  .content-right
+    .content-right__header 購入内容の確認
+    .content-right__wrapper
+      .content-right__purchase
+        .content-right__purchasepictureandname
+          = image_tag 'mercari-icon.png', size: "105x74", class: "purchse-icon__image"
+          = @product.name
+        .content-right__purchaseprice
+          = @product.price.to_s
+          送料込み
+        .content-right__action-button--point ポイントはありません
+        .content-right__purchaseprice-fv
+          = "支払い金額" + "¥" + @product.price.to_s
+        .content-right__action-button--buy
+          = link_to "購入する", purchase_index_path(id: @product.id)
+        .content-right__shipping
+          .content-right__shipping--title 配送先
+          .content-right__shipping--detail
+          .content-right__shipping--detail-postal
+            〒150-0043（仮置き）
+          .content-right__shipping--detail-address
+            東京都渋谷区道玄坂２丁目２３−１２ フォンティスビル7F（仮置き）
+          .content-right__shipping--detail-name
+            = current_user. kanji_name
+          .content-right__info--link 変更する
+          .content-right__info--arrow >
+        .content-right__buy
+          .content-right__buy--title 支払い方法
+          .content-right__buy--detail-number ***********1234(仮置き)
+          .content-right__buy--detail-expirationdate 01/30(仮置き)
+          .content-right__info--link 変更する
+          .content-right__info--arrow >
+= render 'shared/footer_agreement'
