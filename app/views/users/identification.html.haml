@@ -10,13 +10,16 @@
       .content-right__info-top--arrow >
       .content-right__detail
         .content-right__detail--title お名前
-        .content-right__detail--info name
+        .content-right__detail--info
+          = @user.kanji_name
       .content-right__detail
         .content-right__detail--title お名前カナ
-        .content-right__detail--info name-kana
+        .content-right__detail--info
+          = @user.kana_name
       .content-right__detail
         .content-right__detail--title 生年月日
-        .content-right__detail--info BOD
+        .content-right__detail--info
+          = @user.birth_of_date
       .content-right__detail
         .content-right__detail--title 郵便番号
         %span.content-right__detail--optional 任意

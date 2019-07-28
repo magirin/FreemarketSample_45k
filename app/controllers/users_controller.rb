@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(current_user.id)
   end
 
   def show
@@ -19,6 +20,14 @@ class UsersController < ApplicationController
   end
 
   def destroy
+  end
+
+  def identification
+    @user = User.find(current_user.id)
+  end
+
+  def profile
+    @user = User.find(current_user.id)
   end
 
 end

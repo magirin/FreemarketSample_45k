@@ -2,7 +2,9 @@
 .pickup
   %h2 ピックアップカテゴリー
   %h3
-    %a{:href => "#"} レディース 新着アイテム
+    %a{:href => "#"}
+      = @category[0].name
+      新着アイテム
   .pickup__items
     = render "shared/pickup"
   .pickup__allitems

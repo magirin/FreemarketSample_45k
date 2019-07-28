@@ -7,8 +7,10 @@
     .content-right__icon
       .content-right__icon--avator
       .content-right__icon--text-field
+        = @user.kanji_name
     .content-right__profile
-      .content-right__profile--text-area 例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪
+      .content-right__profile--text-area
+        = @user.profile
       .content-right__profile--sent-button 変更する
     .footer-sell-button
       .footer-sell-button__letter 出品
