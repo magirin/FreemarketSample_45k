@@ -1,7 +1,7 @@
 - @products.each do |product|
   .pickup__items-item
     .pickup__items-item-picture
-      = link_to product_path(product, id: product.id) do
+      = link_to product_path(product) do
         = image_tag "notepc.svg", size: "212x200", alt: "カテゴリ"
     .pickup__items-item-name
       = product.name

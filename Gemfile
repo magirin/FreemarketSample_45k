@@ -61,6 +61,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'bullet'
   gem 'rubocop', require: false
+  gem 'ffi', '= 1.10.0'
 end
 
 group :test, :development do
