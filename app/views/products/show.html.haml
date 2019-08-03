@@ -52,7 +52,7 @@
         = "¥" + @product.price.to_s + "-"
       %span.product__price--tax (税込)
       .product__price--shipping 送料込み
-    - if @product.purchasedflag == '0'
+    - if @product.purchasedflag == '0' || @product.purchasedflag == nil
       .product__action-button--notpurchased
         = link_to "購入画面に進む", buy_sold_product_path
     - else
