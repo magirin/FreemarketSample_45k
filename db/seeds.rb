@@ -1,7 +1,7 @@
 User.create!(
-  id: "1",
+  id: 1,
   email: "aaa@gmail.com",
-  password: "1111111111111111",
+  password: "123456",
   kanji_name: "鈴木太郎",
   kana_name: "スズキタロウ",
   nickname: "すーさん",
@@ -20,7 +20,6 @@ Product.create!(
   shipping_way: 0,
   shipping_place: 0,
   shipping_date: 0,
-  product_status: 0,
   user_id: 1,
   bland_id: nil,
   category_id: 1,
