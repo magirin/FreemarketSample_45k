@@ -33,9 +33,30 @@
 
     &--right{
       display: flex;
-      margin-left: 380px;
+      margin-left: 150px;
     }
   }
+}
+.header__bottom--right-block{
+  position: relative;
+  padding: 0 14px;
+}
+
+.ball-icon{
+  height: 32px;
+  width: 32px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+  align-items: center;
+}
+
+.bell-icon{
+  font-size: 25px;
+}
+
+.check-icon{
+  font-size: 25px;
 }
 
 .product-search{
@@ -51,7 +72,7 @@
   width: 20px;
   position: absolute;
   top: 20px;
-  right: 230px;
+  right: 500px;
 }
 
 .header-mercari-icon{
