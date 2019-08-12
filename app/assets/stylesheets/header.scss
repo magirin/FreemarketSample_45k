@@ -8,9 +8,7 @@
   background-color: white;
 
   &__top{
-    width: 90%;
     display: flex;
-    margin: auto;
     align-items: center;
     justify-content: center;
     height: 50px;
@@ -21,13 +19,11 @@
   }
 
   &__bottom{
-    width: 90%;
     display: flex;
-    margin-left: 6.5%;
     align-items: center;
+    justify-content: center;
     background-color: white;
     height: 50px;
-    left: 30px;
 
     &--left{
       display: flex;
@@ -45,6 +41,16 @@
   width: 780px;
   height: 40px;
   margin: 0 0 15px 15px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.search-icon{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 20px;
+  right: 230px;
 }
 
 .header-mercari-icon{
@@ -78,12 +84,7 @@
   background: #1e90ff;
   color: #ffffff;
 }
-.search-icon{
-  height: 20px;
-  width: 20px;
-  position: relative;
-  right: 40px;
-}
+
 .fa-list.header__bottom--left--itemcategory-list, .header__bottom--left--itemcategory-brand{
   color: #dc143c;
 }
