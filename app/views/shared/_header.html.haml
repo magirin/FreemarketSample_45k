@@ -120,7 +120,11 @@
                 %a{:href => "#"} アディダス
               %li
                 %a{:href => "#"} カテゴリー一覧
-    .header__bottom--right
-      %a.new_user_btn{:href => user_session_path} ログイン
-      %a.sign_in_btn{:href => new_user_registration_path} 新規会員登録
-
+    - if user_signed_in?
+      .header__bottom--right
+        %a.new_user_btn{:href => user_session_path} ログイン
+        %a.sign_in_btn{:href => new_user_registration_path} 新規会員登録
+    - else
+      .header__bottom--right
+        %a.new_user_btn{:href => user_session_path} あああっ
+        %a.sign_in_btn{:href => new_user_registration_path} あああああ
